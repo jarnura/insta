@@ -1,0 +1,24 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.timeline {
+	text-align: center;
+}
+.image {
+	display: inline-block;
+	padding: 2px 2px 2px 2px;
+	border: 1px solid black;
+	width: 100%;
+	height: 450px;
+}
+.pic {
+	display: inline-block;
+	vertical-align: middle;
+	padding-top: 10%;
+}
+.userd {
+	display: inline-block;
+	border: 1px solid black;
+	text-align: left;
+	width: 100%;
+}

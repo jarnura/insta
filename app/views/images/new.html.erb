@@ -1,0 +1,12 @@
+<%= form_for @image, url: images_path, html: { multipart: true} do |f| %>
+
+
+
+<div class="file-field">
+        <div class="btn btn-primary btn-sm">
+             <%= f.file_field :pic %>
+        </div>
+    </div>
+
+    <button type="submit" class="btn aqua-gradient btn-rounded">upload</button>  
+<% end %>

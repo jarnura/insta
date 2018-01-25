@@ -1,0 +1,32 @@
+<%= @count %>
+
+<h1>Timeline</h1>
+                        
+
+
+
+<% if !@images.nil? %>
+<% @images.each do |image| %>
+<!--Card Regular-->
+<div class="card card-cascade" style="margin: 3% 3% 3% 3%;">
+
+    <!--Card image-->
+    <div class="view overlay hm-white-slight">
+        <%= image_tag image.pic.url(:medium), class: "img-fluid"%>
+        <a>
+            <div class="mask"></div>
+        </a>
+    </div>
+    <!--/.Card image-->
+
+    <!--Card content-->
+    <div class="card-body text-center">
+        <!--Title-->
+        <h4 class="card-title"><strong><%= link_to User.find(image.user_id).name,User.find(image.user_id) %></strong></h4>
+
+    </div>
+    <!--/.Card content-->
+
+</div>
+<% end %>
+	<% end %>
