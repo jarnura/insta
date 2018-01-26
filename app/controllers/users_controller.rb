@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   def index
   	@user = User.all
-    @count = Image.where(user_id: session[:user_id]).length
+    
   end
 
   def new
@@ -17,6 +17,7 @@ class UsersController < ApplicationController
   end
   def subs
     @user = User.find(session[:user_id])
+
     @followees = @user.followees(User)
     trav = 0
     @followees.each do |f|
@@ -43,6 +44,7 @@ class UsersController < ApplicationController
   end
   def show
     @user = User.find(params[:id])
+    @count = Image.where(user_id: @user.id).size
   end
   def list
     @users = User.all

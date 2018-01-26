@@ -33,8 +33,9 @@
       <% else %>
         <h4 class="text-white">Login</h4>
       <%end%>
+       
       <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
-      
+      <% if logged_in? %>
       <%= link_to "common sharing page",images_path, :onclick => 'document.location.reload(true)', class: "navbar-brand" %>
 
       <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
@@ -46,6 +47,7 @@
             <%= link_to "upload", new_image_path, class: "nav-link" %>
           </li>
         </ul>
+         <%end%>
         <form class="form-inline my-2 my-lg-0">
         
           <% if logged_in? %>
